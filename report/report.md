@@ -79,7 +79,7 @@
 | Linux 源码目录 | `/home/tmw/os-lab/OS2026` |
 | 编译产物 | `bin/kernel`；`bin/ucore.img` |
 | 内核 ELF 信息 | ELF64；RISC-V；入口地址 `0x80200000` |
-| 调试日志 | [lab1-ex2-gdb.txt](lab1-ex2-gdb.txt) |
+| 调试日志 | [lab1-ex2-gdb-mw.txt](lab1-ex2-gdb-mw.txt) |
 
 ---
 
