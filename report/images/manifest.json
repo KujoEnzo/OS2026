@@ -1,0 +1,66 @@
+{
+  "archivedOn": "2026-10-23",
+  "source": "用户保存到WSL report/images的原始终端截图，未修改像素内容",
+  "images": [
+    {
+      "file": "succeed.png",
+      "description": "默认Best-Fit与DTB初始化、原检查成功",
+      "bytes": 166909,
+      "sha256": "9009485165ceac741b45092d30a7c066d40d9cac6a1d922ce6aa62653e5f026a"
+    },
+    {
+      "file": "buddy.png",
+      "description": "Buddy模式、五组专项测试及自检成功",
+      "bytes": 211715,
+      "sha256": "5940b291e53af3c4091846d75092ec56c32bc6fb092858704caa5a004550e78c"
+    },
+    {
+      "file": "score.png",
+      "description": "显式-kernel兼容参数评分20/20",
+      "bytes": 59562,
+      "sha256": "7fed271742de1285ec33a31466ac80147b069f16186e1e660ed7078f17e983b8"
+    },
+    {
+      "file": "分页关闭时地址直接返回1.png",
+      "description": "Bare参数与真实取指调用栈",
+      "bytes": 237586,
+      "sha256": "cb1781724242930765e88eca0414407595a532d31aa3629c0a0ca9232e89ddfc"
+    },
+    {
+      "file": "分页关闭时地址直接返回2.png",
+      "description": "Bare分支返回值0与物理地址0x80200000",
+      "bytes": 148238,
+      "sha256": "1917315757eb7e4bab44da26584e5a65be0ec5b8303f52fe823574e426208169"
+    },
+    {
+      "file": "分页开启后的软件 TLB 查询.png",
+      "description": "高地址取指软件TLB未命中",
+      "bytes": 187587,
+      "sha256": "ef7ef04401da94580ba13f3077f6f07bd0626d4db28a8df5084cf56f3e855043"
+    },
+    {
+      "file": "实际读取根页表项.png",
+      "description": "根级索引511与PTE 0x200000cf",
+      "bytes": 96209,
+      "sha256": "275d2f031a2c5aa7d16f82fd03f16e87c7fe093e6a2f71f86351ab02ace679fa"
+    },
+    {
+      "file": "计算出物理地址.png",
+      "description": "跨行中间态、返回值0与最终pa=0x802000d8",
+      "bytes": 180066,
+      "sha256": "258c1d42e9a8785423a93424973d60e89ffc8ccfef3575b77384a23f78fe5867"
+    },
+    {
+      "file": "未命中后已经写入缓存.png",
+      "description": "TLB填充后的缓存项与命中检查",
+      "bytes": 101501,
+      "sha256": "eb3a3e5e7f6f4c5eb35c50df4baaece7570e8343b091bf898ae4b4c0d4f865c2"
+    },
+    {
+      "file": "填充后的 TLB 与双 GDB 环境.png",
+      "description": "两个GDB、符号恢复与kern_init+56实际停点",
+      "bytes": 310403,
+      "sha256": "167f416b477d77743f01f6510d68b8ba9e95c4f808d11a05ff46089b1586daa1"
+    }
+  ]
+}

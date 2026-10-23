@@ -1,0 +1,1 @@
+PASS: allocator methods unchanged; pmm.c/page_init, whole Best-Fit file, public header, Makefile and grading files byte-for-byte unchanged; default Best-Fit image restored.

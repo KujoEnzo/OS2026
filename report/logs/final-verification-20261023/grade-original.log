@@ -1,0 +1,10 @@
+lab2 injection complete
+gmake[1]: Entering directory '/tmp/os2026-lab2-check-8h6byxyw/grade-original' + cc kern/init/entry.S + cc kern/init/init.c + cc kern/libs/stdio.c + cc kern/debug/panic.c + cc kern/driver/console.c + cc kern/driver/dtb.c + cc kern/mm/best_fit_pmm.c + cc kern/mm/buddy_pmm.c + cc kern/mm/default_pmm.c + cc kern/mm/pmm.c + cc kern/test/test_lab2.c + cc libs/printfmt.c + cc libs/readline.c + cc libs/sbi.c + cc libs/string.c + ld bin/kernel riscv64-unknown-elf-objcopy bin/kernel --strip-all -O binary bin/ucore.img gmake[1]: Leaving directory '/tmp/os2026-lab2-check-8h6byxyw/grade-original'
+  -check page init:                          WRONG
+   -e !! error: missing '[Test 1] Page Init: PASS'
+
+  -check best fit:                           WRONG
+   -e !! error: missing '[Test 2] Best-Fit: PASS'
+
+Total Score: 0/20
+make: *** [Makefile:210: grade] Error 1

@@ -1,0 +1,290 @@
+[
+  {
+    "path": "logs/best-fit/baseline-build.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-best-fit/baseline-build.log",
+    "bytes": 356,
+    "sha256": "3710498526c776f116728dfd569269474fdd541a124a10805e779b389cc678df"
+  },
+  {
+    "path": "logs/best-fit/baseline-clean.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-best-fit/baseline-clean.log",
+    "bytes": 17,
+    "sha256": "bff0b97d31529f48e082733b189dcb5c2999bb96946009281562dc0e8d4e4984"
+  },
+  {
+    "path": "logs/best-fit/baseline-qemu.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-best-fit/baseline-qemu.log",
+    "bytes": 2060,
+    "sha256": "78a07cd5e99d6bddd3bdee2f7788c2d74f88c09a3f975615e6491309a027f4a0"
+  },
+  {
+    "path": "logs/best-fit/boundary-build.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-best-fit/boundary-build.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "logs/best-fit/boundary.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-best-fit/boundary.log",
+    "bytes": 85,
+    "sha256": "22e13a4cd14dd86bab4e0362daa67b3da5e44757ba04717f3de978ff499c40bc"
+  },
+  {
+    "path": "logs/best-fit/build.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-best-fit/build.log",
+    "bytes": 384,
+    "sha256": "40db6861e2f6d395eee86d19b89b13ea81c1910badf1afeb9834f0037b1064a8"
+  },
+  {
+    "path": "logs/best-fit/clean.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-best-fit/clean.log",
+    "bytes": 17,
+    "sha256": "bff0b97d31529f48e082733b189dcb5c2999bb96946009281562dc0e8d4e4984"
+  },
+  {
+    "path": "logs/best-fit/final-build.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-best-fit/final-build.log",
+    "bytes": 384,
+    "sha256": "40db6861e2f6d395eee86d19b89b13ea81c1910badf1afeb9834f0037b1064a8"
+  },
+  {
+    "path": "logs/best-fit/final-integrity.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-best-fit/final-integrity.log",
+    "bytes": 437,
+    "sha256": "d04921f86b23c69b0dff48ab00aa80387856adeefa372243da160cf5daee4e06"
+  },
+  {
+    "path": "logs/best-fit/grade-boot-diagnostic.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-best-fit/grade-boot-diagnostic.log",
+    "bytes": 2182,
+    "sha256": "fc75d7446485dfdfcf88bbf1f1ddd568f1d505fe13bbbd267bcdc5777613f68b"
+  },
+  {
+    "path": "logs/best-fit/grade-compatible.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-best-fit/grade-compatible.log",
+    "bytes": 643,
+    "sha256": "130f56bca930ebb3d01eb3dde6a1bc2ad1432cdb6e5e8eab4c95ccdff35a7bdf"
+  },
+  {
+    "path": "logs/best-fit/grade-original-qemu.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-best-fit/grade-original-qemu.log",
+    "bytes": 1371,
+    "sha256": "bf90cdd349b2ade8ed373c310800f8995a42bdaed31063694bfdab0cd6be3678"
+  },
+  {
+    "path": "logs/best-fit/grade.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-best-fit/grade.log",
+    "bytes": 791,
+    "sha256": "b79a1a30505e589b9a23c6a534aadfa11e5ce716a3bd3d862942e20e0e6f35b9"
+  },
+  {
+    "path": "logs/best-fit/qemu.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-best-fit/qemu.log",
+    "bytes": 2131,
+    "sha256": "5c797b77303c6a45fad3b7833f521ac62ce450049e63879fd8e988fcffa8ac6b"
+  },
+  {
+    "path": "logs/buddy/boundary-build.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/boundary-build.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "logs/buddy/boundary-red.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/boundary-red.log",
+    "bytes": 352,
+    "sha256": "e8d931f8e13a9ab81aa2807ecd09b8e63f78c4bcd747de3247bf20dd55273987"
+  },
+  {
+    "path": "logs/buddy/boundary.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/boundary.log",
+    "bytes": 108,
+    "sha256": "88f6f3c9745e3d588fce622fd7e1f1c73cab32f2625fc4f5f92522e00e8bfbd9"
+  },
+  {
+    "path": "logs/buddy/buddy-build.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/buddy-build.log",
+    "bytes": 409,
+    "sha256": "21a4931696834446f3a80d3c359cccad9dce212e97def72c71ddd94655caedf9"
+  },
+  {
+    "path": "logs/buddy/buddy-clean.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/buddy-clean.log",
+    "bytes": 17,
+    "sha256": "bff0b97d31529f48e082733b189dcb5c2999bb96946009281562dc0e8d4e4984"
+  },
+  {
+    "path": "logs/buddy/buddy-qemu.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/buddy-qemu.log",
+    "bytes": 2155,
+    "sha256": "eeff0cecba628f1f96c189d5e915f90e96bcb20dd20ce10466ad7d2560643514"
+  },
+  {
+    "path": "logs/buddy/capacity-build.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/capacity-build.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "logs/buddy/capacity.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/capacity.log",
+    "bytes": 135,
+    "sha256": "61a85b9cc5ed8f0cd446ad1ed57f4ce95c90cd215ae67e5b11c6c7b40fa131f1"
+  },
+  {
+    "path": "logs/buddy/default-build.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/default-build.log",
+    "bytes": 409,
+    "sha256": "afe671b28582071277a886cefeb446602b321dcc43f66e879e647962c7953e93"
+  },
+  {
+    "path": "logs/buddy/default-clean.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/default-clean.log",
+    "bytes": 17,
+    "sha256": "bff0b97d31529f48e082733b189dcb5c2999bb96946009281562dc0e8d4e4984"
+  },
+  {
+    "path": "logs/buddy/default-qemu.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/default-qemu.log",
+    "bytes": 2131,
+    "sha256": "f290722d105dfc1047dd19f42711f086caee11ed1d0bc659921c58dad5867c0a"
+  },
+  {
+    "path": "logs/buddy/final-clean.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/final-clean.log",
+    "bytes": 17,
+    "sha256": "bff0b97d31529f48e082733b189dcb5c2999bb96946009281562dc0e8d4e4984"
+  },
+  {
+    "path": "logs/buddy/final-default-build.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/final-default-build.log",
+    "bytes": 409,
+    "sha256": "21a4931696834446f3a80d3c359cccad9dce212e97def72c71ddd94655caedf9"
+  },
+  {
+    "path": "logs/buddy/final-default-qemu.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/final-default-qemu.log",
+    "bytes": 2131,
+    "sha256": "f290722d105dfc1047dd19f42711f086caee11ed1d0bc659921c58dad5867c0a"
+  },
+  {
+    "path": "logs/buddy/grade-compatible.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/grade-compatible.log",
+    "bytes": 668,
+    "sha256": "3eb1208f7dbfb3773ff253ddf9fe06b748fcd9d342540adc72d0a353438fa325"
+  },
+  {
+    "path": "logs/buddy/grade-original-qemu.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/grade-original-qemu.log",
+    "bytes": 1371,
+    "sha256": "bf90cdd349b2ade8ed373c310800f8995a42bdaed31063694bfdab0cd6be3678"
+  },
+  {
+    "path": "logs/buddy/grade-original.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/grade-original.log",
+    "bytes": 816,
+    "sha256": "f0dc475e49f73a443b8d0763b9b8d108c5e82b16c793acd36a5b1b6e417a014c"
+  },
+  {
+    "path": "logs/buddy/integrity.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/integrity.log",
+    "bytes": 152,
+    "sha256": "2fffc2fa7e8d5099a77737d963ff01ca604b276deb672c2d322be04399222f90"
+  },
+  {
+    "path": "logs/buddy-check/buddy-build.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy-check/buddy-build.log",
+    "bytes": 409,
+    "sha256": "21a4931696834446f3a80d3c359cccad9dce212e97def72c71ddd94655caedf9"
+  },
+  {
+    "path": "logs/buddy-check/buddy-clean.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy-check/buddy-clean.log",
+    "bytes": 17,
+    "sha256": "bff0b97d31529f48e082733b189dcb5c2999bb96946009281562dc0e8d4e4984"
+  },
+  {
+    "path": "logs/buddy-check/buddy-qemu.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy-check/buddy-qemu.log",
+    "bytes": 2529,
+    "sha256": "396074b9607484c4c55ab278f384764a78bc97aae07165cf4dc8b7278f395e54"
+  },
+  {
+    "path": "logs/buddy-check/default-build.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy-check/default-build.log",
+    "bytes": 409,
+    "sha256": "afe671b28582071277a886cefeb446602b321dcc43f66e879e647962c7953e93"
+  },
+  {
+    "path": "logs/buddy-check/default-clean.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy-check/default-clean.log",
+    "bytes": 17,
+    "sha256": "bff0b97d31529f48e082733b189dcb5c2999bb96946009281562dc0e8d4e4984"
+  },
+  {
+    "path": "logs/buddy-check/default-qemu.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy-check/default-qemu.log",
+    "bytes": 2129,
+    "sha256": "40e3ed0b0d430c2ae2ec9e889c7adda2fd44f6e8d6346c9fffeb10a5289a28b7"
+  },
+  {
+    "path": "logs/buddy-check/integrity.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy-check/integrity.log",
+    "bytes": 173,
+    "sha256": "f56e935c1876743279324e207eb065deebc3d8e1fdbc6319f73e0d8e73bf2e4f"
+  },
+  {
+    "path": "logs/buddy-check/mutation.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy-check/mutation.log",
+    "bytes": 168,
+    "sha256": "e117425829443f06b7f6591f0eea53a31279541b280a66a1a11a6868bcb3a7c0"
+  },
+  {
+    "path": "logs/buddy-check/negative-model-build.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy-check/negative-model-build.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "logs/buddy-check/negative-model.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy-check/negative-model.log",
+    "bytes": 108,
+    "sha256": "88f6f3c9745e3d588fce622fd7e1f1c73cab32f2625fc4f5f92522e00e8bfbd9"
+  },
+  {
+    "path": "logs/buddy-check/no-coalesce-build.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy-check/no-coalesce-build.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "logs/buddy-check/no-coalesce.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy-check/no-coalesce.log",
+    "bytes": 129,
+    "sha256": "b245a638a05d66edfb83e3782e58cc32ec15619660d3344edd4cd432166e0758"
+  },
+  {
+    "path": "logs/buddy-check/restore-build.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy-check/restore-build.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "logs/buddy-check/restore.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy-check/restore.log",
+    "bytes": 147,
+    "sha256": "085d261d8048a335ccb07ff669430a4b08e72ece3904442d71918567e80c1b4b"
+  },
+  {
+    "path": "logs/buddy-check/wrong-count-build.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy-check/wrong-count-build.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "logs/buddy-check/wrong-count.log",
+    "source": "/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy-check/wrong-count.log",
+    "bytes": 133,
+    "sha256": "35b4fb86b2ce63ea676cbed76251249f97c8a9b97ea790e32b63de44a1cb5a64"
+  }
+]

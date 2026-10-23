@@ -1,0 +1,72 @@
+{
+  "checkedAt": "2026-10-23 09:48:17 +0800",
+  "head": "7db2f61e208761d4a9b6e838a96baadcc8dba370",
+  "branch": "codex/lab2-module2",
+  "scratch": "/tmp/os2026-lab2-check-8h6byxyw",
+  "tests": [
+    {
+      "name": "best-fit-clean",
+      "exit": 0,
+      "timeout": false,
+      "seconds": 0.03
+    },
+    {
+      "name": "best-fit-build",
+      "exit": 0,
+      "timeout": false,
+      "seconds": 0.63
+    },
+    {
+      "name": "best-fit-qemu",
+      "exit": 0,
+      "timeout": true,
+      "seconds": 6.02,
+      "checksPassed": true
+    },
+    {
+      "name": "buddy-clean",
+      "exit": 0,
+      "timeout": false,
+      "seconds": 0.02
+    },
+    {
+      "name": "buddy-build",
+      "exit": 0,
+      "timeout": false,
+      "seconds": 0.58
+    },
+    {
+      "name": "buddy-qemu",
+      "exit": 0,
+      "timeout": true,
+      "seconds": 6.02,
+      "checksPassed": true
+    },
+    {
+      "name": "grade-original",
+      "exit": 2,
+      "timeout": false,
+      "seconds": 2.39,
+      "score": "Total Score: 0/20"
+    },
+    {
+      "name": "grade-compatible",
+      "exit": 0,
+      "timeout": false,
+      "seconds": 2.27,
+      "score": "Total Score: 20/20"
+    }
+  ],
+  "frameworkTestsUnchanged": {
+    "basic_check": true,
+    "best_fit_check": true
+  },
+  "pageInitUnchangedFromModule1": true,
+  "gradingFilesUnchanged": {
+    "tools/grade.sh": true,
+    "tools/inject.py": true,
+    "tools/test_lab2.c": true,
+    "tools/test_lab2.h": true
+  },
+  "workRepositoryUnchanged": true
+}

@@ -1,0 +1,2 @@
+wrong-count: expected SIGILL assertion rejection; new manager.check caught mutation
+no-coalesce: expected SIGILL assertion rejection; new manager.check caught mutation

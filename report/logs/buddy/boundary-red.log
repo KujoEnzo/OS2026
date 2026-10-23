@@ -1,0 +1,4 @@
+/mnt/c/Users/chine/.codex/.chatgpt-projects/g-p-6ac9bc3457348191a2500d2673a2d94d/lab2-buddy/boundary.c:3:10: fatal error: /home/kujoenzo/OS2026/code/kern/mm/buddy_pmm.c: No such file or directory
+    3 | #include "/home/kujoenzo/OS2026/code/kern/mm/buddy_pmm.c"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.

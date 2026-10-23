@@ -1,0 +1,1 @@
+PASS: repeated manager.check preserves all real Page descriptors, entire metadata table, heads, pointers/counts and live allocations byte-for-byte

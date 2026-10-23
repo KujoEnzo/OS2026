@@ -1,0 +1,6 @@
+PASS: original basic_check and best_fit_check preserved byte-for-byte.
+PASS: pmm.c differs only in default manager selection; page_init unchanged.
+PASS: protected Makefile, build helper, grading scripts/tests, default allocator and header unchanged.
+PASS: .pending restored to .c; lab2 markers retained; no student ID added.
+PASS: git diff --check.
+SHA256 best_fit_pmm.c: 71f1ac746640ea8b2debfcaa403178034097afeee2c90da3d483e9988071c582
