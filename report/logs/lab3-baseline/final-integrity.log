@@ -1,0 +1,15 @@
+Final pre-commit integrity review (2026-11-04 Asia/Shanghai)
+Branch: lab3; parent/lab2: 7a79a86b81ef33301a28eef87db85b2ae45cb21f
+Official archive: SHA256 b2328d813abf194e458cc4dab68815a1f9280e6ac73c9cfdcb4d60ec10f630bb
+56 exact expected source paths; 53 byte-identical originals; 3 documented migration files.
+77 pre-existing non-code files unchanged, including historical reports and .gitignore.
+Lab2 implementation regions and two required constants verified against parent.
+SAVE_ALL, all module-one/module-two placeholders and official grading files unchanged.
+All local report links resolve; newly authored reports have no trailing whitespace.
+git diff --check: exit 2, only whitespace inherited from official course source, retained.
+Independent read-only review: no Critical/Important findings; ready for baseline-only commit.
+Independent reviewer recompiled all 43 layout assertions with -fsyntax-only: exit 0.
+Build verification: full clean build exit 2 for module-two missing handlers only.
+Targeted migrated objects and trap assembly: exit 0. Layout assertions: exit 0.
+No kernel or image produced; no QEMU or grade run; no Lab3 functionality claim.
+No push performed. Local commit intentionally retains both unimplemented modules.

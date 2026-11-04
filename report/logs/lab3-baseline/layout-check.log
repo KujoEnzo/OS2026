@@ -1,0 +1,3 @@
+$ riscv64-unknown-elf-gcc -mcmodel=medany -std=gnu99 -Werror -Wall -nostdinc -Ilibs -Ikern/trap -c ../report/sources/trapframe-layout-check.c -o obj/trapframe-layout-check.o
+
+EXIT=0

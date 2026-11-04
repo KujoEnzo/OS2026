@@ -1,0 +1,19 @@
+{
+  "official_files": 56,
+  "byte_identical_official_files": 53,
+  "only_migrated_files": [
+    "code/kern/mm/best_fit_pmm.c",
+    "code/kern/mm/memlayout.h",
+    "code/kern/mm/pmm.c"
+  ],
+  "official_grade_inject_tests_trapentry_trap_h_trap_c_unchanged": true,
+  "official_best_fit_tests_unchanged": true,
+  "lab2_implementation_regions_exact": true,
+  "default_allocator_preserved": true,
+  "layout_assertions": 43,
+  "layout_check_exit": 0,
+  "migrated_objects_exit": 0,
+  "baseline_build_exit": 2,
+  "kernel_produced": false,
+  "qemu_or_grade_run": false
+}

@@ -1,0 +1,14 @@
+$ make -B obj/kern/mm/pmm.o obj/kern/mm/best_fit_pmm.o obj/kern/trap/trapentry.o
++ cc kern/mm/pmm.c
+kern/mm/pmm.c: In function 'page_init':
+kern/mm/pmm.c:117:23: error: 'PHYSICAL_MEMORY_END' undeclared (first use in this function); did you mean 'PHYSICAL_MEMORY_OFFSET'?
+  117 |     if (managed_end > PHYSICAL_MEMORY_END) {
+      |                       ^~~~~~~~~~~~~~~~~~~
+      |                       PHYSICAL_MEMORY_OFFSET
+kern/mm/pmm.c:117:23: note: each undeclared identifier is reported only once for each function it appears in
+kern/mm/pmm.c:129:26: error: 'KERNEL_BEGIN_PADDR' undeclared (first use in this function)
+  129 |     if (descriptors_pa < KERNEL_BEGIN_PADDR ||
+      |                          ^~~~~~~~~~~~~~~~~~
+make: *** [Makefile:118: obj/kern/mm/pmm.o] Error 1
+
+EXIT=2

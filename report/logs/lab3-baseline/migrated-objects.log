@@ -1,0 +1,6 @@
+$ make -B obj/kern/mm/pmm.o obj/kern/mm/best_fit_pmm.o obj/kern/trap/trapentry.o
++ cc kern/mm/pmm.c
++ cc kern/mm/best_fit_pmm.c
++ cc kern/trap/trapentry.S
+
+EXIT=0

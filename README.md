@@ -13,3 +13,9 @@ report/
 ```
 
 提交前检查报告引用的截图在 `report/images/` 中，且代码与报告都位于对应的 `labx` 分支。Git 不跟踪空目录，`images/` 尚无截图时可在实际提交时创建。
+
+## Lab3 基线准备
+
+本分支使用 2026 课程 Lab3 原始框架，仅迁移必要的 Lab2 代码；模块一和模块二仍待实现。
+来源、迁移边界和实际构建结果见 [基线记录](report/lab3-baseline.md)，本人负责的模块一接口与验收要求见 [模块一规格](report/module1-spec.md)。
+`report/report.md`、`report/prompt.md` 及原有截图、日志为保留的 Lab2 历史材料，不代表 Lab3 完成情况。
