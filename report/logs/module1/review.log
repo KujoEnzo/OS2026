@@ -1,0 +1,13 @@
+Read-only independent final review of Module 1
+Baseline: 3335e0e6e1663e33cba41c3d5645f6b9be0416f0
+Critical: none. Important: none. Ready for requested local commit, no push.
+Verified CSR/GPR/sp ordering, processed frame semantics, C ABI call and existing SRET path.
+Independent temporary-copy rerun: positive build/GDB0, mutant build0/GDB1 at case2 x2, recheck build/GDB0.
+Independent review output: /tmp/os2026-module1-independent-review-20261104
+Formal inventory: 56 files, only trapentry.S changed.
+Formal implementation SHA256 d37c6e50bd3fa1ea0db7374336472be5ee5d57905d04246d84a7368019bb5caf.
+Optional test clarity finding: C snapshot resets scratch before recording it.
+Resolution: relabel C check as sampler-reset check; document that actual scratch is GDB-verified;
+add explicit post-SRET scratch assertion. Final dynamic suite rerun: 0/1/0; formal code unchanged.
+Scope rulings: do not treat module2/real interrupts/U stack/recursive traps/FP-vector/full grading as verified.
+Formal full build still exits2 for the two absent module2 handlers; object/layout/disassembly checks pass.

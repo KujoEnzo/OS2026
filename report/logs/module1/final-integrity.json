@@ -1,0 +1,14 @@
+{
+  "formal_only_trapentry_changed": true,
+  "test_matrix_gdb_exits": [
+    0,
+    1,
+    0
+  ],
+  "no_formal_test_sources": true,
+  "authored_whitespace_exit": 0,
+  "raw_qemu_log_whitespace_warnings": 315,
+  "raw_logs_preserved": true,
+  "tracked_source_hash": "d37c6e50bd3fa1ea0db7374336472be5ee5d57905d04246d84a7368019bb5caf",
+  "origin_lab3_unchanged": true
+}

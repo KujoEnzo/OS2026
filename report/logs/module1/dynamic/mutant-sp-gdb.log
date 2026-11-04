@@ -1,0 +1,68 @@
+$ gdb-multiarch -q -nx -batch -ex set $module1_port=50643 -x /home/kujoenzo/OS2026/report/tests/module1/gdb_check.py
+The target architecture is set to "riscv:rv64".
+0x0000000000001000 in ?? ()
+Breakpoint 1 at 0xffffffffc0200098: file kern/init/module1_harness.S, line 7.
+Breakpoint 2 at 0xffffffffc02007c2: file kern/init/module1_test.c, line 19.
+
+Breakpoint 1, module1_run () at kern/init/module1_harness.S:7
+7	    csrw sie, zero
+Breakpoint 3 at 0xffffffffc02017ba: file kern/trap/trap.c, line 91.
+Breakpoint 4 at 0xffffffffc0201838: file kern/trap/trapentry.S, line 115.
+Breakpoint 5 at 0xffffffffc0201882: file kern/trap/trapentry.S, line 117.
+Breakpoint 6 at 0xffffffffc02007c0: file kern/init/module1_harness.S, line 258.
+GDB sret instruction address=0xffffffffc0201882
+
+Breakpoint 3, trap_dispatch (tf=0xffffffffc0208f00) at kern/trap/trap.c:91
+91	    if ((intptr_t)tf->cause < 0) {
+PASS case0 trap(a0=sp=F=0xffffffffc0208f00), ABI16, saved x0..x31, status, epc, cause
+
+Breakpoint 4, __trapret () at kern/trap/trapentry.S:115
+115	    RESTORE_ALL
+PASS case0 C return sp=F, processed epc=0xffffffffc020023e
+
+Breakpoint 5, __trapret () at kern/trap/trapentry.S:117
+117	    sret
+PASS case0 before sret: x0..x31 exact; ra=1122334400000101 sp=ffffffffc0209020 a0=112233440000010a a5=112233440000010f t6=112233440000011f
+Temporary breakpoint 7 at 0xffffffffc020023e: file kern/init/module1_harness.S, line 45.
+
+Temporary breakpoint 7, module1_after0 () at kern/init/module1_harness.S:45
+45	    csrw sscratch, t6
+PASS case0 after sret: PC=ffffffffc020023e SIE/SPIE/SPP=020 priv=S
+
+Breakpoint 3, trap_dispatch (tf=0xffffffffc0208f00) at kern/trap/trap.c:91
+91	    if ((intptr_t)tf->cause < 0) {
+PASS case1 trap(a0=sp=F=0xffffffffc0208f00), ABI16, saved x0..x31, status, epc, cause
+
+Breakpoint 4, __trapret () at kern/trap/trapentry.S:115
+115	    RESTORE_ALL
+PASS case1 C return sp=F, processed epc=0xffffffffc020049e
+
+Breakpoint 5, __trapret () at kern/trap/trapentry.S:117
+117	    sret
+PASS case1 before sret: x0..x31 exact; ra=1122334400000101 sp=ffffffffc0209020 a0=112233440000010a a5=112233440000010f t6=112233440000011f
+Temporary breakpoint 8 at 0xffffffffc020049e: file kern/init/module1_harness.S, line 128.
+
+Temporary breakpoint 8, module1_after1 () at kern/init/module1_harness.S:128
+128	    csrw sscratch, t6
+PASS case1 after sret: PC=ffffffffc020049e SIE/SPIE/SPP=022 priv=S
+
+Breakpoint 3, trap_dispatch (tf=0xffffffffc0208f00) at kern/trap/trap.c:91
+91	    if ((intptr_t)tf->cause < 0) {
+PASS case2 trap(a0=sp=F=0xffffffffc0208f00), ABI16, saved x0..x31, status, epc, cause
+
+Breakpoint 4, __trapret () at kern/trap/trapentry.S:115
+115	    RESTORE_ALL
+PASS case2 C return sp=F, processed epc=0xffffffffc02006fc
+
+Breakpoint 5, __trapret () at kern/trap/trapentry.S:117
+117	    sret
+MODULE1_GDB_FAIL: case2 restored x2: got=0xffffffffc0209020 expected=0xffffffffc020b030
+Traceback (most recent call last):
+  File "/home/kujoenzo/OS2026/report/tests/module1/gdb_check.py", line 69, in <module>
+    equal('case%d restored x%d' % (case,x), reg('x%d' % x), value('module1_returned[%d]' % x))
+  File "/home/kujoenzo/OS2026/report/tests/module1/gdb_check.py", line 16, in equal
+    raise AssertionError('%s: got=0x%016x expected=0x%016x' % (name, got, expected))
+AssertionError: case2 restored x2: got=0xffffffffc0209020 expected=0xffffffffc020b030
+[Inferior 1 (process 1) detached]
+
+EXIT=1

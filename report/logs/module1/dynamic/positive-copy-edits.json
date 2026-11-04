@@ -1,0 +1,7 @@
+{
+  "kern/trap/trap.c": "d4e9ec3f7a9dea8eb7814af4f1514202150c49720102bd22c6fd35d70cad476a",
+  "kern/init/init.c": "4b12f74b5c5aacf909b4906f0014551c968f3924b7dbeb029ac631a82ebb33c1",
+  "kern/init/module1_test.h": "30b38c4b6862783591f29ff91176562d0fa928d9a6c6c650125e7ecb4b1e535b",
+  "kern/init/module1_test.c": "a8948b4dabecbe7e70596dfcbecc680e415baa595f3432c3e7a1f221130e8220",
+  "kern/init/module1_harness.S": "f6f6f333e131a1e6230651c4f7a0c9b89b9b9e7e3a31a945ca1d106c2a43dd2f"
+}

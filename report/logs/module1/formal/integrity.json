@@ -1,0 +1,17 @@
+{
+  "baseline": "3335e0e6e1663e33cba41c3d5645f6b9be0416f0",
+  "formal_code_changed": [
+    "code/kern/trap/trapentry.S"
+  ],
+  "only_two_allowed_regions_changed": true,
+  "other_formal_sources_identical_to_baseline": true,
+  "no_test_sources_in_code": true,
+  "trapentry_sha256": "d37c6e50bd3fa1ea0db7374336472be5ee5d57905d04246d84a7368019bb5caf",
+  "object_build_exit": 0,
+  "layout_assertions": 43,
+  "layout_exit": 0,
+  "disassembly_checked": true,
+  "full_build_exit": 2,
+  "module2_missing_handlers_only": true,
+  "formal_kernel_produced": false
+}

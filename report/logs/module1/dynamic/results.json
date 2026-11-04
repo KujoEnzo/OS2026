@@ -1,0 +1,27 @@
+{
+  "runs": [
+    {
+      "label": "positive",
+      "build_exit": 0,
+      "gdb_exit": 0,
+      "scratch_copy": "/tmp/os2026-module1-positive-3tw1xdka/code",
+      "mutant": false
+    },
+    {
+      "label": "mutant-sp",
+      "build_exit": 0,
+      "gdb_exit": 1,
+      "scratch_copy": "/tmp/os2026-module1-mutant-sp-p6wzcf8o/code",
+      "mutant": true
+    },
+    {
+      "label": "recheck",
+      "build_exit": 0,
+      "gdb_exit": 0,
+      "scratch_copy": "/tmp/os2026-module1-recheck-yui03bl6/code",
+      "mutant": false
+    }
+  ],
+  "formal_source_unchanged": true,
+  "trapentry_sha256": "d37c6e50bd3fa1ea0db7374336472be5ee5d57905d04246d84a7368019bb5caf"
+}

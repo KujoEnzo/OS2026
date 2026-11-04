@@ -1,0 +1,16 @@
+$ gdb-multiarch -q -nx -batch -ex set $module1_port=44647 -x /home/kujoenzo/OS2026/report/tests/module1/gdb_check.py
+The target architecture is set to "riscv:rv64".
+0x0000000000001000 in ?? ()
+Breakpoint 1 at 0xffffffffc0200098: file kern/init/module1_harness.S, line 7.
+Breakpoint 2 at 0xffffffffc02007c2: file kern/init/module1_test.c, line 19.
+
+Breakpoint 1, module1_run () at kern/init/module1_harness.S:7
+7	    csrw sie, zero
+MODULE1_GDB_FAIL: No symbol "trap" in current context.
+Traceback (most recent call last):
+  File "/home/kujoenzo/OS2026/report/tests/module1/gdb_check.py", line 37, in <module>
+    trap_bp = gdb.Breakpoint('*trap')
+gdb.error: No symbol "trap" in current context.
+[Inferior 1 (process 1) detached]
+
+EXIT=1

@@ -1,12 +1,12 @@
 # Lab3 模块一规格：RESTORE_ALL 与 __alltraps
 
-状态：**仅规格，未实现**。分工：本人负责模块一；模块二不在本次工作范围。规格绑定 [基线记录](lab3-baseline.md) 中 SHA-256 为 `b2328d813abf194e458cc4dab68815a1f9280e6ac73c9cfdcb4d60ec10f630bb` 的 2026 课程框架及本地最小 Lab2 迁移。
+状态：**模块一已按本规格实现并完成受控验证**，当前结果见 [模块一验证记录](module1-validation.md)。本文件保留基线时确定的布局、契约与验收要求。分工：本人负责模块一；模块二不在本次工作范围。规格绑定 [基线记录](lab3-baseline.md) 中 SHA-256 为 `b2328d813abf194e458cc4dab68815a1f9280e6ac73c9cfdcb4d60ec10f630bb` 的 2026 课程框架及本地最小 Lab2 迁移。
 
 ## 1. 依据与允许修改范围
 
 直接依据：`code/kern/trap/trapentry.S` 的 `SAVE_ALL` 和模块一两处占位、`trap.h` 的结构和签名、`trap.c` 的 `idt_init/trap/trap_dispatch`、`libs/riscv.h` 与 `defs.h`、启动栈及课程上下文测试。课程要求见 [2026 Lab3 练习](http://oslab.mobisys.top/lab2026/_book/lab3/lab3_2_1_exercise.html)。通用调用规则参考 [RISC-V psABI，整数调用约定](https://riscv-non-isa.github.io/riscv-elf-psabi-doc/#_integer_calling_convention)；Trap 状态语义参考 [RISC-V Supervisor-Level ISA](https://docs.riscv.org/reference/isa/v20260120/priv/supervisor.html)。文件定义决定布局，架构规范用于解释调用与返回语义。
 
-未来实现仅填写 `trapentry.S` 中 `RESTORE_ALL` 与 `__alltraps` 的两处 `#lab3 function1 YOUR CODE`。不得修改 `SAVE_ALL`、`struct pushregs`、`struct trapframe`、`void trap(struct trapframe *tf)` 签名、课程测试/评分文件，或在模块一实现中代做 `interrupt_handler/exception_handler`。保留既有 `__trapret` 和尾部 `sret`；不在文档中规定唯一指令序列。
+模块一实现范围仅限填写 `trapentry.S` 中 `RESTORE_ALL` 与 `__alltraps` 的两处 `#lab3 function1 YOUR CODE`。不得修改 `SAVE_ALL`、`struct pushregs`、`struct trapframe`、`void trap(struct trapframe *tf)` 签名、课程测试/评分文件，或在模块一实现中代做 `interrupt_handler/exception_handler`。保留既有 `__trapret` 和尾部 `sret`；不在文档中规定唯一指令序列。
 
 ## 2. 实际框架前置条件
 
@@ -102,7 +102,7 @@
 2. 在 `code/` 编译 `../report/sources/trapframe-layout-check.c`，命令见基线记录。43 项断言全部通过才接受布局；若目标架构、字段或宏改变，重新核对规格，不继续套用偏移。
 3. 单独构建 `make -B obj/kern/trap/trapentry.o`；检查 `riscv64-unknown-elf-objdump -dr obj/kern/trap/trapentry.o`，确认调用 trap、CSR 写回、寄存器恢复、sp 最后恢复和 sret 的路径。该对象可能显示调用重定位，不能把未链接的地址当最终运行地址。
 
-本次 A.2 和汇编编译已通过；A.3 的完整恢复行为当前必然未满足，因为占位尚空。详见构建记录，不能据此声称模块一验收通过。
+基线准备时 A.2 和汇编编译通过，而 A.3 因占位尚空不满足。当前实现后的编译、反汇编及动态验收结果见 [模块一验证记录](module1-validation.md)；不能仅凭对象编译成功宣称上下文恢复正确。
 
 ### B. 模块一后续独立动态验收（不依赖交付模块二实现）
 
@@ -126,8 +126,8 @@
 
 课程 `test_lab3_context.S` 以 `ebreak` 检查多数 t/s/a 寄存器；`test_lab3.c` 还检查非法指令返回和持续时钟。评分第一项也依赖模块二正确处理断点并输出 `Breakpoint at`，所以不能仅凭该项失败断定模块一错误。现有寄存器测试未完整覆盖 ra/sp/gp/tp/a0、所有 status/epc 更新边界或任意 GPR 修改，必须结合 B 中的定点检查，不能把课程 PASS 当作完整上下文证明。
 
-## 9. 当前结论与交接
+## 9. 基线阶段结论与集成依赖
 
-本次已完成真实代码接口、布局和验收规格整理；未填写两个模块。布局断言和迁移文件编译通过；完整构建因模块二占位缺失函数而退出 2，未生成内核，未开展动态验收或评分。
+基线提交 `3335e0e` 时，已完成真实代码接口、布局和验收规格整理，尚未填写两个模块；当时布局断言和迁移文件编译通过，完整构建因模块二占位缺失函数而退出2。随后本轮仅实现模块一，受控副本动态验证通过；正式模块二仍为空，正式完整构建仍受阻，尚无课程评分结论。
 
 模块二边界接口：真实 `clock.h` 提供 `volatile size_t ticks` 与 `clock_set_next_event()`；`clock.c` 通过 `sbi_set_timer(get_cycles()+100000)` 设定下一次事件并设置 STIE；`sbi.h/c` 提供 `void sbi_shutdown(void)`。`TICK_NUM=100` 只在 `trap.c` 定义，真实框架没有 `SHUTDOWN_AFTER` 定义。它们用于说明集成依赖，不属于模块一要实现的行为，也不在本次补齐。

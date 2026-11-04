@@ -1,0 +1,4 @@
+$ make -B obj/kern/trap/trapentry.o
++ cc kern/trap/trapentry.S
+
+EXIT=0

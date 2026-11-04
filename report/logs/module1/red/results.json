@@ -1,0 +1,12 @@
+{
+  "runs": [
+    {
+      "label": "red",
+      "build_exit": 0,
+      "gdb_exit": 1,
+      "scratch_copy": "/tmp/os2026-module1-red-xzznpcy5/code",
+      "mutant": false
+    }
+  ],
+  "formal_source_unchanged": true
+}
