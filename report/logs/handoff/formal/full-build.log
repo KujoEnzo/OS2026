@@ -1,0 +1,32 @@
+$ make -k -j2
++ cc kern/init/entry.S
++ cc kern/init/init.c
++ cc kern/libs/stdio.c
++ cc kern/debug/kdebug.c
++ cc kern/debug/kmonitor.c
++ cc kern/debug/panic.c
++ cc kern/driver/clock.c
++ cc kern/driver/console.c
++ cc kern/driver/dtb.c
++ cc kern/driver/intr.c
++ cc kern/trap/trap.c
+kern/trap/trap.c: In function 'trap_dispatch':
+kern/trap/trap.c:89:9: error: implicit declaration of function 'interrupt_handler' [-Werror=implicit-function-declaration]
+   89 |         interrupt_handler(tf);
+      |         ^~~~~~~~~~~~~~~~~
+kern/trap/trap.c:92:9: error: implicit declaration of function 'exception_handler' [-Werror=implicit-function-declaration]
+   92 |         exception_handler(tf);
+      |         ^~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+make: *** [Makefile:118: obj/kern/trap/trap.o] Error 1
++ cc kern/trap/trapentry.S
++ cc kern/mm/best_fit_pmm.c
++ cc kern/mm/default_pmm.c
++ cc kern/mm/pmm.c
++ cc libs/printfmt.c
++ cc libs/readline.c
++ cc libs/sbi.c
++ cc libs/string.c
+make: Target 'TARGETS' not remade because of errors.
+
+EXIT=2

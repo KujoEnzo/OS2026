@@ -19,4 +19,5 @@ report/
 本分支使用 2026 课程 Lab3 原始框架，仅迁移必要的 Lab2 代码；模块一已实现并完成受控验证，模块二仍待实现。
 来源、迁移边界和实际构建结果见 [基线记录](report/lab3-baseline.md)，本人负责的模块一接口与验收要求见 [模块一规格](report/module1-spec.md)。
 模块一实现、复现命令、反例及实际日志见 [模块一验证记录](report/module1-validation.md)。
-`report/report.md`、`report/prompt.md` 及原有截图、日志为保留的 Lab2 历史材料，不代表 Lab3 完成情况。
+Lab3正文在 [code/lab3.md](code/lab3.md)，[report/report.md](report/report.md) 提供入口，[report/prompt.md](report/prompt.md) 记录实际提示词；田茂炜接手模块二与完整联调请读 [report/handoff.md](report/handoff.md)。
+原有Lab2截图和日志保留，Lab2原报告/提示词可从固定提交历史读取，不代表Lab3成绩。

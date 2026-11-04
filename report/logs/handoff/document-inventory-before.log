@@ -1,0 +1,7 @@
+$ python3 report/tests/module1/formal_check.py --repo . --out report/logs/handoff/before-document-allowance
+Traceback (most recent call last):
+  File "/home/kujoenzo/OS2026/report/tests/module1/formal_check.py", line 33, in <module>
+    assert actual==set(paths), actual^set(paths)
+AssertionError: {'code/lab3.md'}
+
+EXIT=1

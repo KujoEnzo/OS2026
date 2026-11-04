@@ -1,0 +1,100 @@
+$ riscv64-unknown-elf-objdump -dr obj/kern/trap/trapentry.o
+
+obj/kern/trap/trapentry.o:     file format elf64-littleriscv
+
+
+Disassembly of section .text:
+
+0000000000000000 <__alltraps-0x2>:
+   0:	0001                	nop
+			0: R_RISCV_ALIGN	*ABS*+0x2
+
+0000000000000002 <__alltraps>:
+   2:	14011073          	csrw	sscratch,sp
+   6:	712d                	addi	sp,sp,-288
+   8:	e002                	sd	zero,0(sp)
+   a:	e406                	sd	ra,8(sp)
+   c:	ec0e                	sd	gp,24(sp)
+   e:	f012                	sd	tp,32(sp)
+  10:	f416                	sd	t0,40(sp)
+  12:	f81a                	sd	t1,48(sp)
+  14:	fc1e                	sd	t2,56(sp)
+  16:	e0a2                	sd	s0,64(sp)
+  18:	e4a6                	sd	s1,72(sp)
+  1a:	e8aa                	sd	a0,80(sp)
+  1c:	ecae                	sd	a1,88(sp)
+  1e:	f0b2                	sd	a2,96(sp)
+  20:	f4b6                	sd	a3,104(sp)
+  22:	f8ba                	sd	a4,112(sp)
+  24:	fcbe                	sd	a5,120(sp)
+  26:	e142                	sd	a6,128(sp)
+  28:	e546                	sd	a7,136(sp)
+  2a:	e94a                	sd	s2,144(sp)
+  2c:	ed4e                	sd	s3,152(sp)
+  2e:	f152                	sd	s4,160(sp)
+  30:	f556                	sd	s5,168(sp)
+  32:	f95a                	sd	s6,176(sp)
+  34:	fd5e                	sd	s7,184(sp)
+  36:	e1e2                	sd	s8,192(sp)
+  38:	e5e6                	sd	s9,200(sp)
+  3a:	e9ea                	sd	s10,208(sp)
+  3c:	edee                	sd	s11,216(sp)
+  3e:	f1f2                	sd	t3,224(sp)
+  40:	f5f6                	sd	t4,232(sp)
+  42:	f9fa                	sd	t5,240(sp)
+  44:	fdfe                	sd	t6,248(sp)
+  46:	14001473          	csrrw	s0,sscratch,zero
+  4a:	100024f3          	csrr	s1,sstatus
+  4e:	14102973          	csrr	s2,sepc
+  52:	143029f3          	csrr	s3,stval
+  56:	14202a73          	csrr	s4,scause
+  5a:	e822                	sd	s0,16(sp)
+  5c:	e226                	sd	s1,256(sp)
+  5e:	e64a                	sd	s2,264(sp)
+  60:	ea4e                	sd	s3,272(sp)
+  62:	ee52                	sd	s4,280(sp)
+  64:	850a                	mv	a0,sp
+  66:	00000097          	auipc	ra,0x0
+			66: R_RISCV_CALL	trap
+			66: R_RISCV_RELAX	*ABS*
+  6a:	000080e7          	jalr	ra # 66 <__alltraps+0x64>
+
+000000000000006e <__trapret>:
+  6e:	6412                	ld	s0,256(sp)
+  70:	64b2                	ld	s1,264(sp)
+  72:	10041073          	csrw	sstatus,s0
+  76:	14149073          	csrw	sepc,s1
+  7a:	60a2                	ld	ra,8(sp)
+  7c:	61e2                	ld	gp,24(sp)
+  7e:	7202                	ld	tp,32(sp)
+  80:	72a2                	ld	t0,40(sp)
+  82:	7342                	ld	t1,48(sp)
+  84:	73e2                	ld	t2,56(sp)
+  86:	6406                	ld	s0,64(sp)
+  88:	64a6                	ld	s1,72(sp)
+  8a:	6546                	ld	a0,80(sp)
+  8c:	65e6                	ld	a1,88(sp)
+  8e:	7606                	ld	a2,96(sp)
+  90:	76a6                	ld	a3,104(sp)
+  92:	7746                	ld	a4,112(sp)
+  94:	77e6                	ld	a5,120(sp)
+  96:	680a                	ld	a6,128(sp)
+  98:	68aa                	ld	a7,136(sp)
+  9a:	694a                	ld	s2,144(sp)
+  9c:	69ea                	ld	s3,152(sp)
+  9e:	7a0a                	ld	s4,160(sp)
+  a0:	7aaa                	ld	s5,168(sp)
+  a2:	7b4a                	ld	s6,176(sp)
+  a4:	7bea                	ld	s7,184(sp)
+  a6:	6c0e                	ld	s8,192(sp)
+  a8:	6cae                	ld	s9,200(sp)
+  aa:	6d4e                	ld	s10,208(sp)
+  ac:	6dee                	ld	s11,216(sp)
+  ae:	7e0e                	ld	t3,224(sp)
+  b0:	7eae                	ld	t4,232(sp)
+  b2:	7f4e                	ld	t5,240(sp)
+  b4:	7fee                	ld	t6,248(sp)
+  b6:	6142                	ld	sp,16(sp)
+  b8:	10200073          	sret
+
+EXIT=0

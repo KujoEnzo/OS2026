@@ -30,6 +30,8 @@ assert without==old,'Changes outside the two allowed implementation regions'
 # No test sources or other untracked production files can enter the build.
 actual={f.relative_to(repo).as_posix() for f in code.rglob('*')
         if f.is_file() and 'obj' not in f.parts and 'bin' not in f.parts}
+# The required engineering-root report is documentation, never a build input.
+actual.discard('code/lab3.md')
 assert actual==set(paths), actual^set(paths)
 
 def run(name,cmd,expect):

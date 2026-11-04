@@ -1,0 +1,46 @@
+$ riscv64-unknown-elf-objdump -d --disassemble=__trapret bin/kernel
+
+bin/kernel:     file format elf64-littleriscv
+
+
+Disassembly of section .text:
+
+ffffffffc0201838 <__trapret>:
+ffffffffc0201838:	6412                	ld	s0,256(sp)
+ffffffffc020183a:	64b2                	ld	s1,264(sp)
+ffffffffc020183c:	10041073          	csrw	sstatus,s0
+ffffffffc0201840:	14149073          	csrw	sepc,s1
+ffffffffc0201844:	60a2                	ld	ra,8(sp)
+ffffffffc0201846:	61e2                	ld	gp,24(sp)
+ffffffffc0201848:	7202                	ld	tp,32(sp)
+ffffffffc020184a:	72a2                	ld	t0,40(sp)
+ffffffffc020184c:	7342                	ld	t1,48(sp)
+ffffffffc020184e:	73e2                	ld	t2,56(sp)
+ffffffffc0201850:	6406                	ld	s0,64(sp)
+ffffffffc0201852:	64a6                	ld	s1,72(sp)
+ffffffffc0201854:	6546                	ld	a0,80(sp)
+ffffffffc0201856:	65e6                	ld	a1,88(sp)
+ffffffffc0201858:	7606                	ld	a2,96(sp)
+ffffffffc020185a:	76a6                	ld	a3,104(sp)
+ffffffffc020185c:	7746                	ld	a4,112(sp)
+ffffffffc020185e:	77e6                	ld	a5,120(sp)
+ffffffffc0201860:	680a                	ld	a6,128(sp)
+ffffffffc0201862:	68aa                	ld	a7,136(sp)
+ffffffffc0201864:	694a                	ld	s2,144(sp)
+ffffffffc0201866:	69ea                	ld	s3,152(sp)
+ffffffffc0201868:	7a0a                	ld	s4,160(sp)
+ffffffffc020186a:	7aaa                	ld	s5,168(sp)
+ffffffffc020186c:	7b4a                	ld	s6,176(sp)
+ffffffffc020186e:	7bea                	ld	s7,184(sp)
+ffffffffc0201870:	6c0e                	ld	s8,192(sp)
+ffffffffc0201872:	6cae                	ld	s9,200(sp)
+ffffffffc0201874:	6d4e                	ld	s10,208(sp)
+ffffffffc0201876:	6dee                	ld	s11,216(sp)
+ffffffffc0201878:	7e0e                	ld	t3,224(sp)
+ffffffffc020187a:	7eae                	ld	t4,232(sp)
+ffffffffc020187c:	7f4e                	ld	t5,240(sp)
+ffffffffc020187e:	7fee                	ld	t6,248(sp)
+ffffffffc0201880:	6142                	ld	sp,16(sp)
+ffffffffc0201882:	10200073          	sret
+
+EXIT=0

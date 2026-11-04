@@ -1,0 +1,19 @@
+{
+  "url": "http://oslab.mobisys.top/lab2026/_book/lab3/lab3_4_lab_requirement.html",
+  "retrieved_date": "2026-11-04 Asia/Shanghai",
+  "response_bytes": 59193,
+  "response_sha256": "0b0f8834c4fdabeb51c665d79fb44de7a1aa683035ae9c75ce84d2d2aa3ba0be",
+  "requirements_paraphrased": [
+    "Markdown报告、文本说明为主",
+    "整体功能逻辑线",
+    "核心函数或模块理解",
+    "各练习spec与prompt",
+    "实际bug和解决过程",
+    "实验知识点与OS原理的联系和差异",
+    "重要但实验未覆盖的OS原理",
+    "工程根存报告并使用Git仓库提交",
+    "保留lab3标记且YOUR CODE换为真实学号"
+  ],
+  "project_mapping": "labcodes/lab3 -> code/; report: code/lab3.md",
+  "unknown_student_ids_not_filled": true
+}

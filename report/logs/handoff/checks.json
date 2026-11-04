@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "implementation_commit": "c4d06288262fb8255cb3ebda06407ecc0da46b77",
+  "runtime_files_unchanged_from_implementation": 56,
+  "only_new_code_tree_file_is_report": "code/lab3.md",
+  "formal_test_handlers_absent": true,
+  "module1_markers_preserved": 2,
+  "module2_placeholder_preserved": 1,
+  "unknown_student_ids_not_filled": true,
+  "existing_logs_unchanged": true,
+  "local_markdown_links_checked": 57,
+  "documents_checked": [
+    "README.md",
+    "code/lab3.md",
+    "report/report.md",
+    "report/prompt.md",
+    "report/handoff.md"
+  ],
+  "formal_recheck": {
+    "object": 0,
+    "layout_assertions": 43,
+    "layout": 0,
+    "full_build": 2,
+    "expected_missing_handlers": true
+  },
+  "dynamic_recheck_gdb_exits": [
+    0,
+    1,
+    0
+  ],
+  "formal_check_allows_only_required_report_extra_path": true,
+  "course_requirements_metadata": "report/sources/lab3-report-requirements-20261104.json",
+  "push_authorized_after_verification": true,
+  "independent_document_review": "no Critical, Important or Minor findings"
+}
