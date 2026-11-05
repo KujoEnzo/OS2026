@@ -1,0 +1,3 @@
+PASS timer rearm/count/frame preservation/10 reports/shutdown
+PASS interrupt classification/software acknowledgement/fallback
+PASS 16/32-bit EPC advance/frame preservation/exception fallback/long instruction rejection
