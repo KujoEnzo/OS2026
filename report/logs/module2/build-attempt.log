@@ -1,0 +1,43 @@
+make: Entering directory '/mnt/c/Users/14742/Documents/ChatGPT/oslab2026/OS2026-lab3/code'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/libs/printfmt.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/libs/readline.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/libs/sbi.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/libs/string.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/kern/init/entry.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/kern/init/init.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/kern/libs/stdio.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/kern/debug/kdebug.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/kern/debug/kmonitor.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/kern/debug/panic.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/kern/driver/clock.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/kern/driver/console.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/kern/driver/dtb.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/kern/driver/intr.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/kern/trap/trap.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/kern/trap/trapentry.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/kern/mm/best_fit_pmm.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/kern/mm/default_pmm.d'
+/bin/sh: 1: riscv64-unknown-elf-gcc: not found
+make: *** Deleting file 'obj/kern/mm/pmm.d'
++ cc kern/init/entry.S
+make: riscv64-unknown-elf-gcc: No such file or directory
+make: *** [Makefile:118: obj/kern/init/entry.o] Error 127
+make: Leaving directory '/mnt/c/Users/14742/Documents/ChatGPT/oslab2026/OS2026-lab3/code'
