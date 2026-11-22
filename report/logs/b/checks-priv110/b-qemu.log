@@ -1,0 +1,1 @@
+qemu-system-riscv64: can't apply global rv64-riscv-cpu.priv_spec=v1.10: Unsupported privilege spec version 'v1.10'
