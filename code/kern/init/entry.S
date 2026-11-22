@@ -57,7 +57,7 @@ bootstacktop:
 # 分配 4KiB 内存给预设的三级页表
 boot_page_table_sv39:
     # 0xffffffff_c0000000 map to 0x80000000 (1G)
-    # 前 511 个页表项均设置为 0 ，因此 V=0 ，意味着是空的(unmapped)
+    # Root[2] maps the bootstrap physical PC; root[511] maps the high kernel.
     # Keep the physical execution PC mapped across the satp transition.
     .zero 8 * 2
     .quad (0x80000 << 10) | 0xcf

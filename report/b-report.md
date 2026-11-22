@@ -106,6 +106,7 @@ make grade GDB=gdb-multiarch 'QEMU=qemu-system-riscv64 -kernel bin/ucore.img'
 | initproc实际执行 | pid1、Hello world、Bye输出 | logs/b/checks-sv39/b-qemu.log |
 | GDB首次入口 | current==initproc、parent==idleproc、pgdir物理地址、satp正确 | logs/b/init-gdb.log，B_GDB_INIT_ENTRY_PASS |
 | 完整兼容评分 | PMM/Process Create/Schedule全部OK，30/30 | logs/b/grade-compat.log |
+| 干净Git归档复现 | 提交0019826的code归档，构建/评分退出0，30/30 | logs/b/clean-checkout-build.log、clean-checkout-grade.log |
 
 测试没有实现真实用户地址空间复制、SMP同步或完整do_exit。测试用copy_mm非空父mm只是人为
 错误输入，不是真实用户进程。日志为实际执行结果；本次没有采集桌面截图，不把文本渲染图
@@ -120,5 +121,6 @@ PID哈希支持身份查找；可运行链表与状态支持调度；事务式�
 ## 提交边界
 
 B模块标记已填写2412784，A的YOUR CODE待A本人学号，不能代填。
+主实现提交0019826；后续文档/验证器/归档日志提交不改变B函数逻辑。
 报告按A/B章节组织：A分页思考题保留a-report.md，B中断题见本文；提示词见prompt.md。
 真实日志已归档；A交叉审查及真实终端截图作为最终小组验收待办，不伪称已完成。
