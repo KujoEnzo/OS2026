@@ -1,0 +1,261 @@
+ffffffffc020312a <proc_run>:
+        }
+    }
+}
+
+void proc_run(struct proc_struct *proc)
+{
+ffffffffc020312a:	7179                	addi	sp,sp,-48
+ffffffffc020312c:	f026                	sd	s1,32(sp)
+    static_assert(sizeof(struct context) == 14 * sizeof(uintptr_t));
+    static_assert(offsetof(struct context, ra) == 0);
+    static_assert(offsetof(struct context, sp) == sizeof(uintptr_t));
+    static_assert(offsetof(struct context, s0) == 2 * sizeof(uintptr_t));
+    static_assert(offsetof(struct context, s11) == 13 * sizeof(uintptr_t));
+    if (proc != current)
+ffffffffc020312e:	0000d497          	auipc	s1,0xd
+ffffffffc0203132:	74a48493          	addi	s1,s1,1866 # ffffffffc0210878 <current>
+ffffffffc0203136:	6098                	ld	a4,0(s1)
+{
+ffffffffc0203138:	f406                	sd	ra,40(sp)
+ffffffffc020313a:	ec4a                	sd	s2,24(sp)
+    if (proc != current)
+ffffffffc020313c:	02a70963          	beq	a4,a0,ffffffffc020316e <proc_run+0x44>
+    if (read_csr(sstatus) & SSTATUS_SIE) {
+ffffffffc0203140:	100027f3          	csrr	a5,sstatus
+ffffffffc0203144:	8b89                	andi	a5,a5,2
+    return 0;
+ffffffffc0203146:	4901                	li	s2,0
+    if (read_csr(sstatus) & SSTATUS_SIE) {
+ffffffffc0203148:	ef95                	bnez	a5,ffffffffc0203184 <proc_run+0x5a>
+        local_intr_save(intr_flag);
+        struct proc_struct *prev = current;
+        current = proc;
+        // pgdir is a physical address. The old lsatp() encodes Sv32.
+        uintptr_t satp = ((uintptr_t)SATP_MODE_SV39 << 60) |
+                         (proc->pgdir >> RISCV_PGSHIFT);
+ffffffffc020314a:	755c                	ld	a5,168(a0)
+        uintptr_t satp = ((uintptr_t)SATP_MODE_SV39 << 60) |
+ffffffffc020314c:	56fd                	li	a3,-1
+ffffffffc020314e:	16fe                	slli	a3,a3,0x3f
+                         (proc->pgdir >> RISCV_PGSHIFT);
+ffffffffc0203150:	83b1                	srli	a5,a5,0xc
+        current = proc;
+ffffffffc0203152:	e088                	sd	a0,0(s1)
+        uintptr_t satp = ((uintptr_t)SATP_MODE_SV39 << 60) |
+ffffffffc0203154:	8fd5                	or	a5,a5,a3
+        asm volatile("csrw satp, %0\n\tsfence.vma" : : "r"(satp) : "memory");
+ffffffffc0203156:	18079073          	csrw	satp,a5
+ffffffffc020315a:	12000073          	sfence.vma
+        switch_to(&prev->context, &proc->context);
+ffffffffc020315e:	03050593          	addi	a1,a0,48
+ffffffffc0203162:	03070513          	addi	a0,a4,48
+ffffffffc0203166:	02c000ef          	jal	ra,ffffffffc0203192 <switch_to>
+    if (flag) {
+ffffffffc020316a:	00091763          	bnez	s2,ffffffffc0203178 <proc_run+0x4e>
+        local_intr_restore(intr_flag);
+    }
+}
+ffffffffc020316e:	70a2                	ld	ra,40(sp)
+ffffffffc0203170:	7482                	ld	s1,32(sp)
+ffffffffc0203172:	6962                	ld	s2,24(sp)
+ffffffffc0203174:	6145                	addi	sp,sp,48
+ffffffffc0203176:	8082                	ret
+ffffffffc0203178:	70a2                	ld	ra,40(sp)
+ffffffffc020317a:	7482                	ld	s1,32(sp)
+ffffffffc020317c:	6962                	ld	s2,24(sp)
+ffffffffc020317e:	6145                	addi	sp,sp,48
+        intr_enable();
+ffffffffc0203180:	f50fd06f          	j	ffffffffc02008d0 <intr_enable>
+ffffffffc0203184:	e42a                	sd	a0,8(sp)
+        intr_disable();
+ffffffffc0203186:	f50fd0ef          	jal	ra,ffffffffc02008d6 <intr_disable>
+        struct proc_struct *prev = current;
+ffffffffc020318a:	6098                	ld	a4,0(s1)
+        return 1;
+ffffffffc020318c:	6522                	ld	a0,8(sp)
+ffffffffc020318e:	4905                	li	s2,1
+ffffffffc0203190:	bf6d                	j	ffffffffc020314a <proc_run+0x20>
+
+
+ffffffffc0203192 <switch_to>:
+
+    .text
+    .globl switch_to
+    .type switch_to, @function
+switch_to:
+    STORE ra, 0*REGBYTES(a0)
+ffffffffc0203192:	00153023          	sd	ra,0(a0)
+    STORE sp, 1*REGBYTES(a0)
+ffffffffc0203196:	00253423          	sd	sp,8(a0)
+    STORE s0, 2*REGBYTES(a0)
+ffffffffc020319a:	e900                	sd	s0,16(a0)
+    STORE s1, 3*REGBYTES(a0)
+ffffffffc020319c:	ed04                	sd	s1,24(a0)
+    STORE s2, 4*REGBYTES(a0)
+ffffffffc020319e:	03253023          	sd	s2,32(a0)
+    STORE s3, 5*REGBYTES(a0)
+ffffffffc02031a2:	03353423          	sd	s3,40(a0)
+    STORE s4, 6*REGBYTES(a0)
+ffffffffc02031a6:	03453823          	sd	s4,48(a0)
+    STORE s5, 7*REGBYTES(a0)
+ffffffffc02031aa:	03553c23          	sd	s5,56(a0)
+    STORE s6, 8*REGBYTES(a0)
+ffffffffc02031ae:	05653023          	sd	s6,64(a0)
+    STORE s7, 9*REGBYTES(a0)
+ffffffffc02031b2:	05753423          	sd	s7,72(a0)
+    STORE s8, 10*REGBYTES(a0)
+ffffffffc02031b6:	05853823          	sd	s8,80(a0)
+    STORE s9, 11*REGBYTES(a0)
+ffffffffc02031ba:	05953c23          	sd	s9,88(a0)
+    STORE s10, 12*REGBYTES(a0)
+ffffffffc02031be:	07a53023          	sd	s10,96(a0)
+    STORE s11, 13*REGBYTES(a0)
+ffffffffc02031c2:	07b53423          	sd	s11,104(a0)
+    LOAD ra, 0*REGBYTES(a1)
+ffffffffc02031c6:	0005b083          	ld	ra,0(a1)
+    LOAD sp, 1*REGBYTES(a1)
+ffffffffc02031ca:	0085b103          	ld	sp,8(a1)
+    LOAD s0, 2*REGBYTES(a1)
+ffffffffc02031ce:	6980                	ld	s0,16(a1)
+    LOAD s1, 3*REGBYTES(a1)
+ffffffffc02031d0:	6d84                	ld	s1,24(a1)
+    LOAD s2, 4*REGBYTES(a1)
+ffffffffc02031d2:	0205b903          	ld	s2,32(a1)
+    LOAD s3, 5*REGBYTES(a1)
+ffffffffc02031d6:	0285b983          	ld	s3,40(a1)
+    LOAD s4, 6*REGBYTES(a1)
+ffffffffc02031da:	0305ba03          	ld	s4,48(a1)
+    LOAD s5, 7*REGBYTES(a1)
+ffffffffc02031de:	0385ba83          	ld	s5,56(a1)
+    LOAD s6, 8*REGBYTES(a1)
+ffffffffc02031e2:	0405bb03          	ld	s6,64(a1)
+    LOAD s7, 9*REGBYTES(a1)
+ffffffffc02031e6:	0485bb83          	ld	s7,72(a1)
+    LOAD s8, 10*REGBYTES(a1)
+ffffffffc02031ea:	0505bc03          	ld	s8,80(a1)
+    LOAD s9, 11*REGBYTES(a1)
+ffffffffc02031ee:	0585bc83          	ld	s9,88(a1)
+    LOAD s10, 12*REGBYTES(a1)
+ffffffffc02031f2:	0605bd03          	ld	s10,96(a1)
+    LOAD s11, 13*REGBYTES(a1)
+ffffffffc02031f6:	0685bd83          	ld	s11,104(a1)
+    ret
+ffffffffc02031fa:	8082                	ret
+
+
+ffffffffc02031fc <schedule>:
+}
+
+//LAB4 function3 YOUR CODE
+// A: student ID pending.
+void schedule(void)
+{
+ffffffffc02031fc:	1141                	addi	sp,sp,-16
+ffffffffc02031fe:	e406                	sd	ra,8(sp)
+ffffffffc0203200:	e022                	sd	s0,0(sp)
+    if (read_csr(sstatus) & SSTATUS_SIE) {
+ffffffffc0203202:	100027f3          	csrr	a5,sstatus
+ffffffffc0203206:	8b89                	andi	a5,a5,2
+ffffffffc0203208:	4401                	li	s0,0
+ffffffffc020320a:	ebbd                	bnez	a5,ffffffffc0203280 <schedule+0x84>
+    bool intr_flag;
+    local_intr_save(intr_flag);
+    current->need_resched = 0;
+ffffffffc020320c:	0000d717          	auipc	a4,0xd
+ffffffffc0203210:	66c73703          	ld	a4,1644(a4) # ffffffffc0210878 <current>
+ffffffffc0203214:	00072c23          	sw	zero,24(a4)
+    list_entry_t *start = (current == idleproc) ? &proc_list : &current->list_link;
+ffffffffc0203218:	0000d517          	auipc	a0,0xd
+ffffffffc020321c:	66853503          	ld	a0,1640(a0) # ffffffffc0210880 <idleproc>
+ffffffffc0203220:	04a70a63          	beq	a4,a0,ffffffffc0203274 <schedule+0x78>
+ffffffffc0203224:	0c870713          	addi	a4,a4,200
+ffffffffc0203228:	00007617          	auipc	a2,0x7
+ffffffffc020322c:	22060613          	addi	a2,a2,544 # ffffffffc020a448 <proc_list>
+    list_entry_t *le = start;
+ffffffffc0203230:	87ba                	mv	a5,a4
+    {
+        le = list_next(le);
+        if (le != &proc_list)
+        {
+            struct proc_struct *candidate = le2proc(le, list_link);
+            if (candidate->state == PROC_RUNNABLE)
+ffffffffc0203232:	4589                	li	a1,2
+ffffffffc0203234:	679c                	ld	a5,8(a5)
+        if (le != &proc_list)
+ffffffffc0203236:	00c78663          	beq	a5,a2,ffffffffc0203242 <schedule+0x46>
+            if (candidate->state == PROC_RUNNABLE)
+ffffffffc020323a:	f387a683          	lw	a3,-200(a5)
+ffffffffc020323e:	00b68e63          	beq	a3,a1,ffffffffc020325a <schedule+0x5e>
+            {
+                next = candidate;
+                break;
+            }
+        }
+    } while (le != start);
+ffffffffc0203242:	fef719e3          	bne	a4,a5,ffffffffc0203234 <schedule+0x38>
+    next->runs++;
+ffffffffc0203246:	451c                	lw	a5,8(a0)
+ffffffffc0203248:	2785                	addiw	a5,a5,1
+ffffffffc020324a:	c51c                	sw	a5,8(a0)
+    proc_run(next);
+ffffffffc020324c:	edfff0ef          	jal	ra,ffffffffc020312a <proc_run>
+    if (flag) {
+ffffffffc0203250:	ec09                	bnez	s0,ffffffffc020326a <schedule+0x6e>
+    local_intr_restore(intr_flag);
+}
+ffffffffc0203252:	60a2                	ld	ra,8(sp)
+ffffffffc0203254:	6402                	ld	s0,0(sp)
+ffffffffc0203256:	0141                	addi	sp,sp,16
+ffffffffc0203258:	8082                	ret
+            struct proc_struct *candidate = le2proc(le, list_link);
+ffffffffc020325a:	f3878513          	addi	a0,a5,-200
+    next->runs++;
+ffffffffc020325e:	451c                	lw	a5,8(a0)
+ffffffffc0203260:	2785                	addiw	a5,a5,1
+ffffffffc0203262:	c51c                	sw	a5,8(a0)
+    proc_run(next);
+ffffffffc0203264:	ec7ff0ef          	jal	ra,ffffffffc020312a <proc_run>
+ffffffffc0203268:	d46d                	beqz	s0,ffffffffc0203252 <schedule+0x56>
+}
+ffffffffc020326a:	6402                	ld	s0,0(sp)
+ffffffffc020326c:	60a2                	ld	ra,8(sp)
+ffffffffc020326e:	0141                	addi	sp,sp,16
+        intr_enable();
+ffffffffc0203270:	e60fd06f          	j	ffffffffc02008d0 <intr_enable>
+    list_entry_t *start = (current == idleproc) ? &proc_list : &current->list_link;
+ffffffffc0203274:	00007617          	auipc	a2,0x7
+ffffffffc0203278:	1d460613          	addi	a2,a2,468 # ffffffffc020a448 <proc_list>
+ffffffffc020327c:	8732                	mv	a4,a2
+ffffffffc020327e:	bf4d                	j	ffffffffc0203230 <schedule+0x34>
+        intr_disable();
+ffffffffc0203280:	e56fd0ef          	jal	ra,ffffffffc02008d6 <intr_disable>
+        return 1;
+ffffffffc0203284:	4405                	li	s0,1
+ffffffffc0203286:	b759                	j	ffffffffc020320c <schedule+0x10>
+
+
+ffffffffc020310e <cpu_idle>:
+
+
+//LAB4 function3 YOUR CODE
+// A: student ID pending; module two above remains owned by B.
+void cpu_idle(void)
+{
+ffffffffc020310e:	1141                	addi	sp,sp,-16
+ffffffffc0203110:	e022                	sd	s0,0(sp)
+ffffffffc0203112:	e406                	sd	ra,8(sp)
+ffffffffc0203114:	0000d417          	auipc	s0,0xd
+ffffffffc0203118:	76440413          	addi	s0,s0,1892 # ffffffffc0210878 <current>
+    while (1)
+    {
+        if (current->need_resched)
+ffffffffc020311c:	6018                	ld	a4,0(s0)
+ffffffffc020311e:	4f1c                	lw	a5,24(a4)
+ffffffffc0203120:	2781                	sext.w	a5,a5
+ffffffffc0203122:	dff5                	beqz	a5,ffffffffc020311e <cpu_idle+0x10>
+        {
+            schedule();
+ffffffffc0203124:	0d8000ef          	jal	ra,ffffffffc02031fc <schedule>
+ffffffffc0203128:	bfd5                	j	ffffffffc020311c <cpu_idle+0xe>
+

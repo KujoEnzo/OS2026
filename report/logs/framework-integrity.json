@@ -1,0 +1,15 @@
+{
+  "course_zip_sha256": "7a92f243f88ca9a4ec78b52e554a14d78a41bbf6a79a1275f6cc929aaebceba2",
+  "changed_course_files": [
+    "kern/mm/default_pmm.c",
+    "kern/mm/pmm.c",
+    "kern/process/proc.c",
+    "kern/process/switch.S",
+    "kern/schedule/sched.c",
+    "kern/trap/trap.c",
+    "kern/trap/trapentry.S"
+  ],
+  "official_grading_files_unchanged": true,
+  "allocator_tests_unchanged": true,
+  "production_init_and_proc_header_unchanged": true
+}
