@@ -1,0 +1,7 @@
+{
+  "build": 0,
+  "qemu_exit": 1,
+  "checks": false,
+  "init_main_entered": false,
+  "expected_lab4_exit_panic": false
+}

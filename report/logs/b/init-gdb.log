@@ -1,0 +1,17 @@
+0x0000000000001000 in ?? ()
+Breakpoint 1 at 0xffffffffc0203284: file kern/process/proc.c, line 215.
+
+Breakpoint 1, init_main (arg=0xffffffffc0205508) at kern/process/proc.c:215
+215	    cprintf("this initproc, pid = %d, name = \"%s\"\n", current->pid, get_proc_name(current));
+$1 = 1
+$2 = 1
+$3 = 1
+$4 = 0x80208000
+pc             0xffffffffc0203284	0xffffffffc0203284 <init_main>
+sp             0xffffffffc0411ee0	0xffffffffc0411ee0
+satp           0x8000000000080208	-9223372036854251000
+#0  init_main (arg=0xffffffffc0205508) at kern/process/proc.c:215
+#1  0xffffffffc020322c in kernel_thread_entry () at kern/process/entry.S:5
+Backtrace stopped: frame did not save the PC
+B_GDB_INIT_ENTRY_PASS
+[Inferior 1 (process 1) detached]

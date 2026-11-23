@@ -1,0 +1,19 @@
+0x0000000000001000 in ?? ()
+Breakpoint 1 at 0xffffffffc02024f8: file kern/sync/sync.h, line 9.
+
+Breakpoint 1, check_boot_pgdir () at kern/mm/pmm.c:437
+437	    nr_free_store = nr_free_pages();
+Hardware assisted breakpoint 2 at 0x80200000
+
+Breakpoint 2, 0x0000000080200000 in ?? ()
+pc             0x80200000	0x80200000
+satp           0x8000000000080208	-9223372036854251000
+scause         0xf	15
+stval          0x100	256
+=> 0x80200000:	auipc	t0,0x9
+   0x80200004:	mv	t0,t0
+   0x80200008:	sd	a0,0(t0)
+   0x8020000c:	auipc	t0,0x9
+   0x80200010:	addi	t0,t0,-4
+   0x80200014:	sd	a1,0(t0)
+[Inferior 1 (process 1) detached]

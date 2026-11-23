@@ -34,6 +34,8 @@ CFLAGS  := -mcmodel=medany -O2 -std=gnu99 -Wno-unused
 CFLAGS	+= -fno-builtin -Wall -nostdinc $(DEFS)
 CFLAGS	+= -fno-stack-protector -ffunction-sections -fdata-sections
 CFLAGS	+= -g
+# GCC 14 diagnoses the course's void-returning, non-returning test thread.
+CFLAGS  += -Wno-error=incompatible-pointer-types
 CTYPE	:= c S
 
 LD      := $(GCCPREFIX)ld
