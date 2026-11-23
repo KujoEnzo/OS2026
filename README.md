@@ -1,15 +1,41 @@
-# OS2026
+# OS2026 实验小组仓库
 
-OS2026 实验小组仓库。每个小组使用一个公开仓库；每次实验使用一个独立分支，命名为 `lab1`、`lab2` 等。
+## 小组成员
 
-每个实验分支应包含：
+| 姓名 | 学号 |
+| --- | --- |
+| 郝煦享 | 2412695 |
+| 田茂炜 | 2412784 |
+
+## 实验导航
+
+每次实验使用独立 labx 分支。main 作为导航入口，不混合不同实验的源码。
+
+| 实验 | 提交分支 | 说明 |
+| --- | --- | --- |
+| Lab1 | [lab1](https://github.com/KujoEnzo/OS2026/tree/lab1) | 查看对应分支的代码和材料 |
+| Lab2 | [lab2](https://github.com/KujoEnzo/OS2026/tree/lab2) | 查看对应分支的代码和材料 |
+| Lab3 | [lab3](https://github.com/KujoEnzo/OS2026/tree/lab3) | 查看对应分支的代码和材料 |
+| **Lab4** | **[lab4](https://github.com/KujoEnzo/OS2026/tree/lab4)** | A/B 完整实现，兼容评分 30/30，含报告、实际日志和运行截图 |
+
+## Lab4 最终材料
+
+- [完整实验报告](https://github.com/KujoEnzo/OS2026/blob/lab4/report/report.md)
+- [项目讲解](https://github.com/KujoEnzo/OS2026/blob/lab4/report/project-guide.md)
+- [最终验收与复现命令](https://github.com/KujoEnzo/OS2026/blob/lab4/report/final-validation.md)
+- [真实运行截图](https://github.com/KujoEnzo/OS2026/tree/lab4/report/images)
+- [实际提示词](https://github.com/KujoEnzo/OS2026/blob/lab4/report/prompt.md)
+
+Lab4 的 30/30 使用 -kernel 启动参数与 gdb-multiarch，准确条件以最终验收为准。开发分支 lab4-a-mm-sched 保留历史，正式提交请使用 lab4。
+
+## 分支目录约定
 
 ```text
-code/                 # 本次实验实现后的源代码
-report/
-  report.md           # 实验报告（按课程模板撰写）
-  prompt.md           # 本次实验使用的所有提示词汇总
-  images/             # 报告中提及的测试结果截图
+code/                 # 对应实验源代码及报告入口
+report/report.md      # 实验报告
+report/prompt.md      # 实际提示词
+report/images/        # 真实测试截图
+report/logs/          # 原始验证日志
 ```
 
-提交前检查报告引用的截图在 `report/images/` 中，且代码与报告都位于对应的 `labx` 分支。Git 不跟踪空目录，`images/` 尚无截图时可在实际提交时创建。
+Lab4 的 code/ 对应课程 labcodes/lab4；报告在 code/report.md 提供相对链接入口。其他实验历史分支保持原有内容。
