@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-23",
+  "branch": "lab4",
+  "functional_baseline": "a9b0d532afc57ed6342d1f5b407f585f650173bb",
+  "members": [
+    {
+      "name": "郝煦享",
+      "student_id": "2412695"
+    },
+    {
+      "name": "田茂炜",
+      "student_id": "2412784"
+    }
+  ],
+  "checks": {
+    "build": {
+      "command": [
+        "make",
+        "-j4"
+      ],
+      "exit": 0
+    },
+    "a-tests": {
+      "command": [
+        "python3",
+        "tools/a_tests/run.py",
+        "--suite",
+        "all",
+        "--logs",
+        "/mnt/c/Users/chine/Documents/Codex/2026-11-22/lab4-http-oslab-mobisys-top-lab2026/work/lab4-review-20261123/report/logs/final-lab4/a-tests"
+      ],
+      "exit": 0
+    },
+    "b-tests": {
+      "command": [
+        "python3",
+        "tools/b_tests/run.py",
+        "--logs",
+        "/mnt/c/Users/chine/Documents/Codex/2026-11-22/lab4-http-oslab-mobisys-top-lab2026/work/lab4-review-20261123/report/logs/final-lab4/b-tests"
+      ],
+      "exit": 0
+    },
+    "grade": {
+      "command": [
+        "make",
+        "grade",
+        "GDB=gdb-multiarch",
+        "QEMU=qemu-system-riscv64 -kernel bin/ucore.img",
+        "GRADE_TMP=/tmp/lab4-final-grade-hw9c3qtp/grade"
+      ],
+      "exit": 0
+    }
+  },
+  "official_score": "30/30",
+  "official_grading_files_unchanged": true,
+  "screenshots": {
+    "a-tests.png": "0ea019036cca80173d62fbccc238d39af8406c2505506f98fbce8f268a3b6f72",
+    "b-tests.png": "f98e3ab71c538d7ded154f8c6340b25ff041e0f4aaec3222446992512d0f7d0e",
+    "grade.png": "03862a16e921f6638f0fa260182b37c92d1a86d77f7ee03400b3f3a8c33ae2d9"
+  }
+}

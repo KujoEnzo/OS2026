@@ -343,8 +343,8 @@ proc_init(void)
 }
 
 
-//LAB4 function3 YOUR CODE
-// A: student ID pending; module two above remains owned by B.
+//LAB4 function3 2412695
+// A: Hao Xuxiang (2412695); module two implemented by B (2412784).
 void cpu_idle(void)
 {
     while (1)

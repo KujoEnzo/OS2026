@@ -1,4 +1,5 @@
 # Lab4 A 基线与来源
+> 历史阶段记录（2026-11-22 A 交付时）。最终版本请阅读 [实验报告](report.md) 和 [最终验收](final-validation.md)。A 已署名郝煦享（2412695），B 已合入并联合通过兼容评分；下文保留当时的开发状态和失败证据，不作为当前待办。
 
 - 日期：2026-11-22。
 - 小组仓库：https://github.com/KujoEnzo/OS2026 。本地开发分支 `lab4-a-mm-sched`，从 `origin/main` 的 `3e972c231d7fbcb074c56a3b057eb892fd912dfb` 开始。

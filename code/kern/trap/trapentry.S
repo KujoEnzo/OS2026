@@ -54,7 +54,7 @@
 
     .macro RESTORE_ALL
 
-    #lab3 function1 YOUR CODE
+    #lab3 function1 2412695
     # Consume the C handler's final status/epc before restoring scratch GPRs.
     LOAD s0, 32*REGBYTES(sp)
     LOAD s1, 33*REGBYTES(sp)

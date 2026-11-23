@@ -1,0 +1,9 @@
+{
+  "command": [
+    "python3",
+    "tools/b_tests/run.py",
+    "--logs",
+    "/mnt/c/Users/chine/Documents/Codex/2026-11-22/lab4-http-oslab-mobisys-top-lab2026/work/lab4-review-20261123/report/logs/final-lab4/b-tests"
+  ],
+  "exit": 0
+}

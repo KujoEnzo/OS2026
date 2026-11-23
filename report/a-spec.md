@@ -1,4 +1,5 @@
 # Lab4 A 模块规格
+> 历史阶段记录（2026-11-22 A 交付时）。最终版本请阅读 [实验报告](report.md) 和 [最终验收](final-validation.md)。A 已署名郝煦享（2412695），B 已合入并联合通过兼容评分；下文保留当时的开发状态和失败证据，不作为当前待办。
 
 范围：page_insert/page_remove、cpu_idle/schedule/proc_run/switch_to；不实现 B 六函数。
 

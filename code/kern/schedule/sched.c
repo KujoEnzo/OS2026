@@ -10,8 +10,8 @@ wakeup_proc(struct proc_struct *proc) {
     proc->state = PROC_RUNNABLE;
 }
 
-//LAB4 function3 YOUR CODE
-// A: student ID pending.
+//LAB4 function3 2412695
+// A: Hao Xuxiang (2412695).
 void schedule(void)
 {
     bool intr_flag;

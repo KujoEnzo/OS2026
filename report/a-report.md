@@ -1,12 +1,12 @@
 # Lab4 A 报告素材
 
-此文件是 A 负责部分的实测报告素材，完整小组报告还需 B 补充创建模块和联合验收。
+作者：郝煦享（2412695），负责页映射及调度切换。本文保留 A 阶段技术分析；B 创建模块已合入，完整结果见 [最终实验报告](report.md)。
 
 ## 整体逻辑
 
 物理内存管理提供页和内核栈；页表操作维护线性地址映射；进程创建把 PCB、栈、trapframe 和 context 组织为可运行线程；调度器选择线程，`proc_run` 切换当前进程及页表，`switch_to` 切换寄存器。`cpu_idle` 在空闲线程需要调度时启动该流程。
 
-A 完成页操作及调度切换；B 构造首次运行现场。实际 `initproc` 的 `forkret → forkrets → __trapret → kernel_thread_entry` 链路仍须两人联调。
+A 完成页操作及调度切换；B 构造首次运行现场。实际 `initproc` 的 `forkret → forkrets → __trapret → kernel_thread_entry` 链路已在合入 B 后运行验证，见 [最终验收](final-validation.md)。
 
 ## 页映射
 

@@ -4,3 +4,4 @@ code/.gdb.in
 code/.qemu.out
 .superpowers/
 __pycache__/
+report/logs/reproduce*/

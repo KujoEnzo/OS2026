@@ -1,0 +1,10 @@
+{
+  "command": [
+    "make",
+    "grade",
+    "GDB=gdb-multiarch",
+    "QEMU=qemu-system-riscv64 -kernel bin/ucore.img",
+    "GRADE_TMP=/tmp/lab4-final-grade-hw9c3qtp/grade"
+  ],
+  "exit": 0
+}
